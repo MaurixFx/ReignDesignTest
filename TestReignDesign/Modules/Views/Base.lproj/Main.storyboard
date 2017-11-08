@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzz-lX-gPl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--News Table View Controller-->
+        <scene sceneID="5k8-eM-hOd">
+            <objects>
+                <tableViewController id="zzz-lX-gPl" customClass="NewsTableViewController" customModule="TestReignDesign" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oX2-Ys-p8q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="110" id="Dt7-IW-Ovg" customClass="NewsTableViewCell" customModule="TestReignDesign">
+                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dt7-IW-Ovg" id="NPB-75-OFN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waymo now testing its self-driving cars on public roads with no one at the wheel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCh-NM-6j8">
+                                            <rect key="frame" x="12" y="8" width="351" height="63.5"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ghaff - 25 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaT-cj-BGg">
+                                            <rect key="frame" x="12" y="74.5" width="351" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="rnc-XS-fB5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OaT-cj-BGg" firstAttribute="top" secondItem="YCh-NM-6j8" secondAttribute="bottom" constant="3" id="4FB-K7-PCU"/>
+                                        <constraint firstItem="YCh-NM-6j8" firstAttribute="top" secondItem="NPB-75-OFN" secondAttribute="top" constant="8" id="IQb-cM-jAG"/>
+                                        <constraint firstAttribute="bottom" secondItem="OaT-cj-BGg" secondAttribute="bottom" constant="7" id="JsY-A6-Wkb"/>
+                                        <constraint firstAttribute="trailing" secondItem="YCh-NM-6j8" secondAttribute="trailing" constant="12" id="YHb-sV-TVS"/>
+                                        <constraint firstItem="YCh-NM-6j8" firstAttribute="leading" secondItem="NPB-75-OFN" secondAttribute="leading" constant="12" id="dtx-cO-yEq"/>
+                                        <constraint firstItem="OaT-cj-BGg" firstAttribute="leading" secondItem="NPB-75-OFN" secondAttribute="leading" constant="12" id="kqc-cF-ef4"/>
+                                        <constraint firstAttribute="trailing" secondItem="OaT-cj-BGg" secondAttribute="trailing" constant="12" id="tNU-mX-Eum"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="infoFooterLabel" destination="OaT-cj-BGg" id="qhb-MS-OHI"/>
+                                    <outlet property="titleLabel" destination="YCh-NM-6j8" id="QKY-mE-1wU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zzz-lX-gPl" id="gsE-DL-GTc"/>
+                            <outlet property="delegate" destination="zzz-lX-gPl" id="dDU-Sl-Rzl"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="fv3-ZQ-kOE" kind="show" identifier="showWeb" id="GA9-oB-Tgd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t83-h2-tb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9926" y="0.0"/>
+        </scene>
+        <!--Web Content View Controller-->
+        <scene sceneID="Li5-TF-XWn">
+            <objects>
+                <viewController id="iBo-hk-uPB" customClass="WebContentViewController" customModule="TestReignDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aok-DM-mTv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1Q-Hn-IKB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="y1Q-Hn-IKB" firstAttribute="leading" secondItem="ncz-pt-PCS" secondAttribute="leading" id="1uT-za-hrg"/>
+                            <constraint firstItem="y1Q-Hn-IKB" firstAttribute="top" secondItem="ncz-pt-PCS" secondAttribute="top" id="Wic-Fd-T2X"/>
+                            <constraint firstItem="y1Q-Hn-IKB" firstAttribute="bottom" secondItem="ncz-pt-PCS" secondAttribute="bottom" id="YBO-C7-8zc"/>
+                            <constraint firstItem="y1Q-Hn-IKB" firstAttribute="trailing" secondItem="ncz-pt-PCS" secondAttribute="trailing" id="ybX-Hh-FTK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ncz-pt-PCS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vTB-QG-NpP">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="NSD-bH-acj">
+                            <connections>
+                                <action selector="goBack:" destination="iBo-hk-uPB" id="4e5-Ti-aQX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="y1Q-Hn-IKB" id="geQ-Sb-WMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GgR-Nt-jM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8215.5" y="-0.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="agw-qV-0It">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fv3-ZQ-kOE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="if8-LC-hJr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iBo-hk-uPB" kind="relationship" relationship="rootViewController" id="Z99-ki-lnw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNO-UO-F41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9065" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
