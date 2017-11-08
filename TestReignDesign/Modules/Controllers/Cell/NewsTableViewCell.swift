@@ -20,7 +20,14 @@ class NewsTableViewCell: UITableViewCell {
     
     func configCell(news: News) {
         self.titleLabel.text = news.storyTitle
-        self.infoFooterLabel.text = news.author
+        self.infoFooterLabel.text = "\(news.author!) - \(getDateStory(createdAt: news.createdAt!))"
+    }
+
+    func getDateStory(createdAt: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let date = dateFormatter.date(from: createdAt)
+        return date!.relativeTime
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

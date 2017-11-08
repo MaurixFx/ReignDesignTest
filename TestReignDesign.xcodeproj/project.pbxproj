@@ -21,6 +21,7 @@
 		A34E67401FB3448B0087FAAA /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E673F1FB3448B0087FAAA /* ApiManager.swift */; };
 		A34E67421FB3457E0087FAAA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E67411FB3457E0087FAAA /* Reachability.swift */; };
 		A34E67441FB34A430087FAAA /* WebContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E67431FB34A430087FAAA /* WebContentViewController.swift */; };
+		A34E67461FB3C79A0087FAAA /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E67451FB3C79A0087FAAA /* Dates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		A34E673F1FB3448B0087FAAA /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		A34E67411FB3457E0087FAAA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		A34E67431FB34A430087FAAA /* WebContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentViewController.swift; sourceTree = "<group>"; };
+		A34E67451FB3C79A0087FAAA /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		F43A446F4AE4B6A7CED315EE /* Pods-TestReignDesign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestReignDesign.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestReignDesign/Pods-TestReignDesign.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A34E67411FB3457E0087FAAA /* Reachability.swift */,
+				A34E67451FB3C79A0087FAAA /* Dates.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			files = (
 				A34E67401FB3448B0087FAAA /* ApiManager.swift in Sources */,
 				A34E67441FB34A430087FAAA /* WebContentViewController.swift in Sources */,
+				A34E67461FB3C79A0087FAAA /* Dates.swift in Sources */,
 				A34E671D1FB33DCA0087FAAA /* TestReignDesign.xcdatamodeld in Sources */,
 				A34E67361FB341B00087FAAA /* NewsTableViewCell.swift in Sources */,
 				A34E673D1FB3430A0087FAAA /* News+CoreDataClass.swift in Sources */,
